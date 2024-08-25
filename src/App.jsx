@@ -10,10 +10,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/how-i-deployed-my-app-on-gh-pages"
-          element={<Article000001 />}
-        />
+        <Route path="/">
+          <Route index element={<Article000001 />} />
+          <Route
+            path="how-i-deployed-my-app-on-gh-pages"
+            element={<Article000001 />}
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
