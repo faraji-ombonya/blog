@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
+        <Route path="/blog/">
           <Route index element={<Article000001 />} />
           <Route
             path="how-i-deployed-my-app-on-gh-pages"
