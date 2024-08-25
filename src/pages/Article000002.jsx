@@ -294,7 +294,7 @@ export default function Article000002() {
           </h2>
           <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             <article class="max-w-xs">
-              <Link to="/blog/how-i-deployed-my-app-on-gh-pages/#">
+              <Link to="/how-i-deployed-my-app-on-gh-pages/#">
                 <img
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
                   class="mb-5 rounded-lg"
@@ -302,7 +302,7 @@ export default function Article000002() {
                 />
               </Link>
               <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                <Link to="/blog/how-i-deployed-my-app-on-gh-pages/#">
+                <Link to="/how-i-deployed-my-app-on-gh-pages/#">
                   How I deployed my React Application on Github Pages
                 </Link>
               </h2>
@@ -311,7 +311,7 @@ export default function Article000002() {
                 months of preparation.
               </p>
               <Link
-                to="/blog/how-i-deployed-my-app-on-gh-pages/#"
+                to="/how-i-deployed-my-app-on-gh-pages/#"
                 class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
               >
                 Read in 2 minutes
