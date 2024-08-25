@@ -3,11 +3,20 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Article from "./pages/Article";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Article000001 from "./pages/Article000001";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <Article />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/how-i-deployed-my-app-on-gh-pages"
+          element={<Article000001 />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
