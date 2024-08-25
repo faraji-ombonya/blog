@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: "docs",
-    base: "https://faraji-ombonya.github.io/blog/",
   },
+  base: "https://faraji-ombonya.github.io/blog/",
 });
