@@ -3,15 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Article from "./pages/Article";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import Article000001 from "./pages/Article000001";
 import Article000002 from "./pages/Article000002";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/blog/">
+        <Route path="/">
           <Route index element={<Article000001 />} />
           <Route
             path="how-i-deployed-my-app-on-gh-pages"
@@ -23,7 +23,7 @@ function App() {
           />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
