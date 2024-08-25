@@ -9,7 +9,7 @@ export default function Article000001() {
                 <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                   <img
                     class="mr-4 w-16 h-16 rounded-full"
-                    src="/66465098.jpeg"
+                    src="66465098.jpeg"
                     alt="Jese Leos"
                   />
                   <div>
