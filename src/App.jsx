@@ -18,7 +18,7 @@ function App() {
             element={<Article000001 />}
           />
           <Route
-            path="how-i-built-a-library-search-engine-with-vector-search"
+            path="how-i-built-a-library-search-engine-powered-by-vector-search"
             element={<Article000002 />}
           />
         </Route>
