@@ -22,40 +22,36 @@ export default function Article000001() {
 
   const relatedArticles = [
     {
-      title: "How I deployed my React Application on Github Pages",
+      title: "How I Built a Library Search Engine Powered by Vector Search",
       description:
-        "Over the past year, Volosoft has undergone many changes! After months of preparation.",
-      link: "/how-i-deployed-my-app-on-gh-pages",
-      linkText: "Read in 2 minutes",
-      imageUrl:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png",
+        "Keyword search sometimes is not enough. Sometimes you want to search based on meaning. This is where vector search comes in. In this article, I want to take you through how I built a Library Search Engine that is powered by vector search.",
+      link: "/how-i-built-a-library-search-engine-powered-by-vector-search",
+      linkText: "Read in 5 minutes",
+      imageUrl: "/blog/vector-search-banner.webp",
     },
     {
-      title: "How I deployed my React Application on Github Pages",
+      title: "How I Built a Library Search Engine Powered by Vector Search",
       description:
-        "Over the past year, Volosoft has undergone many changes! After months of preparation.",
-      link: "/how-i-deployed-my-app-on-gh-pages",
-      linkText: "Read in 2 minutes",
-      imageUrl:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png",
+        "Keyword search sometimes is not enough. Sometimes you want to search based on meaning. This is where vector search comes in. In this article, I want to take you through how I built a Library Search Engine that is powered by vector search.",
+      link: "/how-i-built-a-library-search-engine-powered-by-vector-search",
+      linkText: "Read in 5 minutes",
+      imageUrl: "/blog/vector-search-banner.webp",
     },
     {
-      title: "How I deployed my React Application on Github Pages",
+      title: "How I Built a Library Search Engine Powered by Vector Search",
       description:
-        "Over the past year, Volosoft has undergone many changes! After months of preparation.",
-      link: "/how-i-deployed-my-app-on-gh-pages",
-      linkText: "Read in 2 minutes",
-      imageUrl:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png",
+        "Keyword search sometimes is not enough. Sometimes you want to search based on meaning. This is where vector search comes in. In this article, I want to take you through how I built a Library Search Engine that is powered by vector search.",
+      link: "/how-i-built-a-library-search-engine-powered-by-vector-search",
+      linkText: "Read in 5 minutes",
+      imageUrl: "/blog/vector-search-banner.webp",
     },
     {
-      title: "How I deployed my React Application on Github Pages",
+      title: "How I Built a Library Search Engine Powered by Vector Search",
       description:
-        "Over the past year, Volosoft has undergone many changes! After months of preparation.",
-      link: "/how-i-deployed-my-app-on-gh-pages",
-      linkText: "Read in 2 minutes",
-      imageUrl:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png",
+        "Keyword search sometimes is not enough. Sometimes you want to search based on meaning. This is where vector search comes in. In this article, I want to take you through how I built a Library Search Engine that is powered by vector search.",
+      link: "/how-i-built-a-library-search-engine-powered-by-vector-search",
+      linkText: "Read in 5 minutes",
+      imageUrl: "/blog/vector-search-banner.webp",
     },
   ];
   return (
