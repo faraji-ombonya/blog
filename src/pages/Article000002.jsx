@@ -68,7 +68,27 @@ export default function Article000002() {
               <figcaption>Digital art by Anonymous</figcaption>
             </figure>
             <h2>Setting up the vector database</h2>
-            <p>Pgvector extension</p>
+            <p>
+              To store vectors in my PostgreSQL database, I needed to set up
+              pgvector. Pgvector is an open source vector similarity search for
+              Postgres. See{" "}
+              <a
+                target="_blank"
+                href="https://github.com/pgvector/pgvector/blob/master/README.md"
+              >
+                Pgvector's documentation
+              </a>
+              , to learn more about what it is and how to set it up. See this
+              for{" "}
+              <a
+                target="_blank"
+                href="https://github.com/pgvector/pgvector-python?tab=readme-ov-file#django"
+              >
+                python(django) specific documentation
+              </a>
+              . Pgvector allowed me to store embeddings in a Postgresql database
+              instead of a specialized vector database.
+            </p>
             <h2>Training the Word2Vec model</h2>
             <p>
               To train the Word2Vec model, I created a script that loads the
@@ -168,7 +188,12 @@ export default function Article000002() {
               including relevant metadata before returning the response.
             </p>
             <h2>Conclusion</h2>
-            <p>In conclusion ...</p>
+            <p>
+              In conclusion, to leverage vector search to power search I had to:
+              Setup pg vector, train a Word2Vec model, use the model to generate
+              embeddings. Store those embeddings in a vector database, use
+              Cosine distance to perform similarity search.
+            </p>
           </article>
         </div>
       </main>
