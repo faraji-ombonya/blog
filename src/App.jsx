@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Article from "./pages/Article";
 import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing";
 import Article000001 from "./pages/Article000001";
 import Article000002 from "./pages/Article000002";
 
@@ -12,7 +13,7 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/">
-          <Route index element={<Article000001 />} />
+          <Route index element={<Landing />} />
           <Route
             path="how-i-deployed-my-app-on-gh-pages"
             element={<Article000001 />}
