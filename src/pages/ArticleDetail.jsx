@@ -18,21 +18,30 @@ export default function ArticleDetail() {
     handleSlugChange();
   }, [slug]);
 
-  console.log("POST", blogPost);
-
   return blogPost ? <DynamicBlogPost post={blogPost} /> : <NotFound />;
 }
 
 function RenderContent({ content }) {
   if (Array.isArray(content)) {
-    return content.map((item, index) => (
+    return content?.map((item, index) => (
       <RenderContent key={index} content={item} />
     ));
   }
 
   switch (content.type) {
     case "p":
-      return <p>{content?.value}</p>;
+      if (Array.isArray(content?.value)) {
+        return (
+          <p>
+            {content?.value?.map((item, index) => (
+              <RenderContent key={index} content={item} />
+            ))}
+          </p>
+        );
+      } else {
+        return <p>{content?.value}</p>;
+      }
+
     case "h1":
       return <h1>{content?.value}</h1>;
     case "h2":
@@ -41,6 +50,23 @@ function RenderContent({ content }) {
       return <h3>{content?.value}</h3>;
     case "text":
       return <span>{content.value}</span>;
+
+    case "link":
+      return <a href={content?.url}>{content?.value}</a>;
+
+    case "li":
+      if (Array.isArray(content?.value)) {
+        return (
+          <li>
+            {content?.value?.map((item, index) => (
+              <RenderContent key={index} content={item} />
+            ))}
+          </li>
+        );
+      } else {
+        return <li key={content?.index}>{content?.value}</li>;
+      }
+
     case "image":
       return (
         <figure>
@@ -52,7 +78,7 @@ function RenderContent({ content }) {
       return (
         <ol>
           {content?.value?.map((item, index) => (
-            <li key={index}>{item?.value}</li>
+            <RenderContent key={index} content={item} />
           ))}
         </ol>
       );
@@ -60,10 +86,12 @@ function RenderContent({ content }) {
       return (
         <ul>
           {content?.value?.map((item, index) => (
-            <li key={index}>{item?.value}</li>
+            <RenderContent key={index} content={item} />
           ))}
         </ul>
       );
+    default:
+      return null;
   }
 }
 
