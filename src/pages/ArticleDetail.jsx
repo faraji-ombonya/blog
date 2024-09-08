@@ -1,5 +1,6 @@
 import Author from "../components/Author";
 import NotFound from "../components/NotFound";
+import RelatedArticles from "../components/RelatedArticles";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { blogPosts } from "../data/blogPosts";
@@ -96,25 +97,32 @@ function RenderContent({ content }) {
 }
 
 export function DynamicBlogPost({ post }) {
-  return (
-    <main class="text-left pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
-      <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
-        <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-          <header class="mb-4 lg:mb-6 not-format">
-            <Author date={post?.date} />
-            <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
-              {post?.title}
-            </h1>
-          </header>
-          <p class="lead">{post?.lead}</p>
-          <figure>
-            <img src={post?.graphic?.src} alt={post?.graphic?.alt} />
-            <figcaption>{post?.graphic?.caption}</figcaption>
-          </figure>
+  const relatedArticles = post?.relatedPosts?.map((slug) =>
+    blogPosts?.find((element) => element.slug == slug)
+  );
 
-          <RenderContent content={post?.content} />
-        </article>
-      </div>
-    </main>
+  return (
+    <>
+      <main class="text-left pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+        <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+          <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+            <header class="mb-4 lg:mb-6 not-format">
+              <Author date={post?.date} />
+              <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+                {post?.title}
+              </h1>
+            </header>
+            <p class="lead">{post?.lead}</p>
+            <figure>
+              <img src={post?.graphic?.src} alt={post?.graphic?.alt} />
+              <figcaption>{post?.graphic?.caption}</figcaption>
+            </figure>
+
+            <RenderContent content={post?.content} />
+          </article>
+        </div>
+      </main>
+      <RelatedArticles relatedArticles={relatedArticles} />
+    </>
   );
 }
