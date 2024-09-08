@@ -232,9 +232,9 @@ export const blogPosts = [
   },
   {
     date: {
-      pubDatetime: "2024-09-07",
-      pubDatetimeTitle: "September 7th, 2024",
-      pubDatetimeDisplay: "Sep. 7, 2024",
+      pubDatetime: "2024-08-26",
+      pubDatetimeTitle: "August 26th, 2024",
+      pubDatetimeDisplay: "Aug. 26, 2024",
     },
     slug: "how-i-built-a-library-search-engine-powered-by-vector-search",
     url: "/how-i-built-a-library-search-engine-powered-by-vector-search",
@@ -322,9 +322,9 @@ export const blogPosts = [
 
   {
     date: {
-      pubDatetime: "2024-09-07",
-      pubDatetimeTitle: "September 7th, 2024",
-      pubDatetimeDisplay: "Sep. 7, 2024",
+      pubDatetime: "2024-09-02",
+      pubDatetimeTitle: "September 2nd, 2024",
+      pubDatetimeDisplay: "Sep. 2, 2024",
     },
     slug: "how-i-deployed-my-react-application-with-gitHub-pages",
     url: "/how-i-deployed-my-react-application-with-gitHub-pages",
