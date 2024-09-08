@@ -332,12 +332,15 @@ export const blogPosts = [
     title: "How I Deployed my React Application with GitHub Pages",
     lead: "After weeks of massive effort, I finally created my portfolio website and needed a place to deploy. The deployment options I had were Vercel, s3 site on AWS and github pages. I decided to go with github pages because it was free and also simple to deploy. GitHub Pages also had simple CI/CD already integrated. This meant that after a successful setup, all I needed to do was push to production and my application would be deployed.",
     graphic: {
-      src: "/blog/vector-search-banner.webp",
+      src: "/blog/gh-pages-react-banner.webp",
       alt: "",
       caption: "Digital art by Dall-E",
     },
     linkText: "Read in 3 minutes",
-    relatedPosts: ["how-to-train-a-word2vec-model"],
+    relatedPosts: [
+      "how-to-train-a-word2vec-model",
+      "how-i-built-a-library-search-engine-powered-by-vector-search",
+    ],
     content: [
       {
         type: "p",
