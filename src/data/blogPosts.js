@@ -26,8 +26,22 @@ export const blogPosts = [
       },
       {
         type: "p",
-        value:
-          "Word2vec is a family of model architectures and optimizations that can be used to learn word embeddings from large datasets. See this documentation (https://www.tensorflow.org/text/tutorials/word2vec) to learn more about Word2vec and how you can use it.",
+        value: [
+          {
+            type: "text",
+            value:
+              "Word2vec is a family of model architectures and optimizations that can be used to learn word embeddings from large datasets. See this ",
+          },
+          {
+            type: "link",
+            value: "documentation",
+            url: "https://www.tensorflow.org/text/tutorials/word2vec",
+          },
+          {
+            type: "text",
+            value: " to learn more about Word2vec and how you can use it.",
+          },
+        ],
       },
       {
         type: "h2",
@@ -35,8 +49,22 @@ export const blogPosts = [
       },
       {
         type: "p",
-        value:
-          "To train a Word2vec model, you will need data. The data will typically be a list of lists of tokens. We will call this list of lists of tokens, sentences. Each sentence in the collection of sentences will consist of a list of tokens.  Therefore, the majority of the work will be preparing the sentences. For large datasets, Word2vec’s documentation recommends that you stream the list directly from disk or network. This improves the memory efficiency of the function. To achieve this, we will create a python generator that streams one sentence at a time from the disk. See this python’s wiki (https://wiki.python.org/moin/Generators) to learn more about generators and how to use them.",
+        value: [
+          {
+            type: "text",
+            value:
+              "To train a Word2vec model, you will need data. The data will typically be a list of lists of tokens. We will call this list of lists of tokens, sentences. Each sentence in the collection of sentences will consist of a list of tokens.  Therefore, the majority of the work will be preparing the sentences. For large datasets, Word2vec’s documentation recommends that you stream the list directly from disk or network. This improves the memory efficiency of the function. To achieve this, we will create a python generator that streams one sentence at a time from the disk. See this ",
+          },
+          {
+            type: "link",
+            value: "python’s wiki",
+            url: "https://wiki.python.org/moin/Generators",
+          },
+          {
+            type: "text",
+            value: " to learn more about generators and how to use them.",
+          },
+        ],
       },
       {
         type: "p",
@@ -152,7 +180,7 @@ export const blogPosts = [
       },
       {
         type: "h2",
-        value: "Train the model",
+        value: "Training the model",
       },
       {
         type: "p",
@@ -161,9 +189,9 @@ export const blogPosts = [
       },
       {
         type: "image",
-        src: "/blog/Screenshot from 2024-09-07 19-21-32.png",
-        alt: "streaming the data",
-        caption: "streaming the data",
+        src: "/blog/Screenshot from 2024-09-07 19-44-25.png",
+        alt: "training the model",
+        caption: "training the model",
       },
       {
         type: "ol",
@@ -319,7 +347,6 @@ export const blogPosts = [
       },
     ],
   },
-
   {
     date: {
       pubDatetime: "2024-09-02",
