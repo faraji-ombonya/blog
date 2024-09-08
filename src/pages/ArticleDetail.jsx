@@ -1,7 +1,8 @@
+import Author from "../components/Author";
+import NotFound from "../components/NotFound";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { blogPosts } from "../data/blogPosts";
-import Author from "../components/Author";
-import { useEffect, useState } from "react";
 
 export default function ArticleDetail() {
   const { slug } = useParams();
@@ -19,7 +20,7 @@ export default function ArticleDetail() {
 
   console.log("POST", blogPost);
 
-  return blogPost ? <DynamicBlogPost post={blogPost} /> : <p>Not found</p>;
+  return blogPost ? <DynamicBlogPost post={blogPost} /> : <NotFound />;
 }
 
 function RenderContent({ content }) {
